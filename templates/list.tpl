@@ -17,22 +17,14 @@
             {/section}
             <!-- Pager -->
             <ul class="pager">
-                {if $activePage==1}
+                {if $activePage!=1}
                     <li class="previous">
-                        <a href="">&larr;Older Posts </a>
-                    </li>
-                {else}
-                    <li class="previous">
-                        <a href="index.php?page={$activePage-1}">&larr;Older Posts </a>
+                        <a href="index.php?page={$activePage-1}">&larr;Новые посты </a>
                     </li>
                 {/if}
-                {if $activePage==$countPages}
+                {if $activePage!=$countPages}
                     <li class="next">
-                        <a href="">Older Posts &rarr;</a>
-                    </li>
-                {else}
-                    <li class="next">
-                        <a href="index.php?page={$activePage+1}">Older Posts &rarr;</a>
+                        <a href="index.php?page={$activePage+1}">Старые посты &rarr;</a>
                     </li>
                 {/if}
             </ul>

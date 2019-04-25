@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="title" content="{$meta_title}">
+    <meta name="keywords" content="{$meta_keywords}">
+    <meta name="description" content="{$meta_desc}">
     <meta name="author" content="">
 
-    <title>Clean Blog</title>
+    <title>{$title}</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -48,6 +48,11 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
+                {section loop=$menu name=i}
+                    <li>
+                        <a href="{$menu[i].page}.php">{$menu[i].title}</a>
+                    </li>
+                {/section}
                 <li>
                     <a href="index.html">Home</a>
                 </li>
@@ -69,14 +74,12 @@
 
 <!-- Page Header -->
 <!-- Set your background image for this header on the line below. -->
-<header class="intro-header" style="background-image: url('img/home-bg.jpg')">
+<header class="intro-header" style="background-image: url('img/{$image}')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="site-heading">
-                    <h1>Clean Blog</h1>
-                    <hr class="small">
-                    <span class="subheading">A Clean Blog Theme by Start Bootstrap</span>
+                    {$theme}
                 </div>
             </div>
         </div>
@@ -84,6 +87,7 @@
 </header>
 
 <!-- Main Content -->
+{$sContent}
 {$content}
 
 <hr>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2019-04-03 16:38:24
+/* Smarty version 3.1.30, created on 2019-04-23 21:54:06
   from "D:\openserver\OpenServer\domains\liza\templates\list.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5ca4b75035bff7_26127710',
+  'unifunc' => 'content_5cbf5f4e349130_36485273',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e9474727b45dac9073d874ef0de58da54350feb4' => 
     array (
       0 => 'D:\\openserver\\OpenServer\\domains\\liza\\templates\\list.tpl',
-      1 => 1554298702,
+      1 => 1556045643,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ca4b75035bff7_26127710 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cbf5f4e349130_36485273 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="container">
     <div class="row">
@@ -57,24 +57,16 @@ $_smarty_tpl->tpl_vars['__smarty_section_i'] = $__section_i_0_saved;
 ?>
             <!-- Pager -->
             <ul class="pager">
-                <?php if ($_smarty_tpl->tpl_vars['activePage']->value == 1) {?>
-                    <li class="previous">
-                        <p>&larr;Older Posts <p>
-                    </li>
-                <?php } else { ?>
+                <?php if ($_smarty_tpl->tpl_vars['activePage']->value != 1) {?>
                     <li class="previous">
                         <a href="index.php?page=<?php echo $_smarty_tpl->tpl_vars['activePage']->value-1;?>
-">&larr;Older Posts </a>
+">&larr;Новые посты </a>
                     </li>
                 <?php }?>
-                <?php if ($_smarty_tpl->tpl_vars['activePage']->value == $_smarty_tpl->tpl_vars['countPages']->value) {?>
-                    <li class="next">
-                        <a href="">Older Posts &rarr;</a>
-                    </li>
-                <?php } else { ?>
+                <?php if ($_smarty_tpl->tpl_vars['activePage']->value != $_smarty_tpl->tpl_vars['countPages']->value) {?>
                     <li class="next">
                         <a href="index.php?page=<?php echo $_smarty_tpl->tpl_vars['activePage']->value+1;?>
-">Older Posts &rarr;</a>
+">Старые посты &rarr;</a>
                     </li>
                 <?php }?>
             </ul>

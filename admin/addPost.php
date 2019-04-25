@@ -7,7 +7,7 @@ if(!isset($_POST['send'])){
     if($_FILES['photo']['error']==0){
         $filenameTMP=$_FILES['photo']['tmp_name'];
         $filename=time().$_FILES['photo']['name'];
-        move_uploaded_file($filenameTMP, "../img/posts/$filename");
+        move_uploaded_file($filenameTMP, '../img/posts/'.$filename);
         $query="INSERT INTO posts(name, theme, text, photo, date) VALUES ('".$_POST['name']."', '".$_POST['theme']."', '".$_POST['text']."', '$filename', now())";
     }else{
         $query="INSERT INTO posts(name, theme, text, date) VALUES ('".$_POST['name']."', '".$_POST['theme']."', '".$_POST['text']."', now())";

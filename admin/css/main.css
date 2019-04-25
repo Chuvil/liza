@@ -1,0 +1,10 @@
+.center{
+    text-align: center;
+    align-content: center;
+    top:50%;
+    vertical-align: text-bottom;
+}
+.middle{
+    color: red;
+    vertical-align: middle;
+}

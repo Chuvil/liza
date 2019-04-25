@@ -3,10 +3,7 @@
     <input type="text" name="name"><br>
     Тема поста<br>
     <input type="text" name="theme"><br>
-    <textarea name="text" placeholder="Текст поста"></textarea><br>
-    <script>
-        CKEDITOR.replace('text');
-    </script>
+    <textarea name="text" placeholder="Текст поста" class="ckEditor"></textarea><br>
     <input type="file" name="photo" value="Загрузить"><br>
     <input type="submit" name="send" value="Отправить">
 </form>

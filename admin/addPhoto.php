@@ -16,6 +16,4 @@ if(!isset($_POST['send'])) {
 }else{
     $content="Фото не добавлено";
 }
-$smarty_main->assign("content", $content);
-$smarty_main->display("main.tpl");
-mysqli_close($dbc);
+require_once ("main.php");

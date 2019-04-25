@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2019-03-11 00:31:00
+/* Smarty version 3.1.30, created on 2019-04-24 00:09:21
   from "D:\openserver\OpenServer\domains\liza\templates\main.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5c858214cd4137_97482363',
+  'unifunc' => 'content_5cbf7f01ce9f05_16921840',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c383340af05e9f7ca05176a5090e685305ba5bbb' => 
     array (
       0 => 'D:\\openserver\\OpenServer\\domains\\liza\\templates\\main.tpl',
-      1 => 1552253459,
+      1 => 1556053536,
       2 => 'file',
     ),
   ),
@@ -20,20 +20,24 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5c858214cd4137_97482363 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cbf7f01ce9f05_16921840 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="title" content="<?php echo $_smarty_tpl->tpl_vars['meta_title']->value;?>
+">
+    <meta name="keywords" content="<?php echo $_smarty_tpl->tpl_vars['meta_keywords']->value;?>
+">
+    <meta name="description" content="<?php echo $_smarty_tpl->tpl_vars['meta_desc']->value;?>
+">
     <meta name="author" content="">
 
-    <title>Clean Blog</title>
+    <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
+</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -76,6 +80,26 @@ function content_5c858214cd4137_97482363 (Smarty_Internal_Template $_smarty_tpl)
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
+                <?php
+$__section_i_0_saved = isset($_smarty_tpl->tpl_vars['__smarty_section_i']) ? $_smarty_tpl->tpl_vars['__smarty_section_i'] : false;
+$__section_i_0_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['menu']->value) ? count($_loop) : max(0, (int) $_loop));
+$__section_i_0_total = $__section_i_0_loop;
+$_smarty_tpl->tpl_vars['__smarty_section_i'] = new Smarty_Variable(array());
+if ($__section_i_0_total != 0) {
+for ($__section_i_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] = 0; $__section_i_0_iteration <= $__section_i_0_total; $__section_i_0_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']++){
+?>
+                    <li>
+                        <a href="<?php echo $_smarty_tpl->tpl_vars['menu']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['page'];?>
+.php"><?php echo $_smarty_tpl->tpl_vars['menu']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['title'];?>
+</a>
+                    </li>
+                <?php
+}
+}
+if ($__section_i_0_saved) {
+$_smarty_tpl->tpl_vars['__smarty_section_i'] = $__section_i_0_saved;
+}
+?>
                 <li>
                     <a href="index.html">Home</a>
                 </li>
@@ -97,14 +121,14 @@ function content_5c858214cd4137_97482363 (Smarty_Internal_Template $_smarty_tpl)
 
 <!-- Page Header -->
 <!-- Set your background image for this header on the line below. -->
-<header class="intro-header" style="background-image: url('img/home-bg.jpg')">
+<header class="intro-header" style="background-image: url('img/<?php echo $_smarty_tpl->tpl_vars['image']->value;?>
+')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="site-heading">
-                    <h1>Clean Blog</h1>
-                    <hr class="small">
-                    <span class="subheading">A Clean Blog Theme by Start Bootstrap</span>
+                    <?php echo $_smarty_tpl->tpl_vars['theme']->value;?>
+
                 </div>
             </div>
         </div>
@@ -112,6 +136,8 @@ function content_5c858214cd4137_97482363 (Smarty_Internal_Template $_smarty_tpl)
 </header>
 
 <!-- Main Content -->
+<?php echo $_smarty_tpl->tpl_vars['sContent']->value;?>
+
 <?php echo $_smarty_tpl->tpl_vars['content']->value;?>
 
 
